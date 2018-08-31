@@ -1,0 +1,106 @@
+.Background {
+    height: 100vh;
+    width: 100vw;
+    background: url(https://images.pexels.com/photos/890507/pexels-photo-890507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920) no-repeat center;
+    background-size: cover;
+    position: absolute;
+}
+
+.Filter {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(63, 179, 80, 0.5);
+    position: absolute;
+    z-index: 10;
+}
+
+.Content {
+    z-index: 20;
+    height: 50vh;
+    width: 50vh;
+}
+
+.Title {
+    font-size: 5rem;
+    color: whitesmoke;
+    padding-left: 2rem;
+}
+
+.Top-Content {
+    grid-area: top-content;
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+}
+
+.Middle-Content {
+    grid-area: middle-content;
+}
+
+.Bottom-Content {
+    grid-area: bottom-content;
+    position: relative;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.Sticky-Element {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10px;
+    display: block;
+}
+
+.Grid-Container {
+    display: grid;
+    grid-template-rows: 1fr auto 5vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: "top-content" "middle-content" "bottom-content";
+}
+
+.Team-Container {
+    margin-top: 20vh;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.Icon {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .Team-Container {
+        flex-direction: column;
+    }
+}
+
+body {
+    font-family: Avenir;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+span {
+    min-height: 5vh;
+    display: inline-flex;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+p {
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 30% auto;
+}
